@@ -5,9 +5,16 @@
 
 using namespace std;
 
-class Polinom_ireductibil::public Polinom
+class Polinom_ireductibil:public Polinom
 {
 public:
-    void verificare_criteriu();
+    void criteriu();
+    Polinom_ireductibil();
+    Polinom_ireductibil(int,Monom*);
+    Polinom_ireductibil(const Polinom&);
+    ~Polinom_ireductibil();
+     void afis();
+
 };
+
 #endif // POLINOMIREDUCTIBIL_H

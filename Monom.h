@@ -6,7 +6,7 @@
 using namespace std;
 
 class Monom{
-private:
+protected:
     int grad;
     float coef;
 public:
@@ -18,7 +18,8 @@ public:
     //virtual void afisare() = 0;
     void operator =(const Monom&);
 
-    void afis();
+    int g_grad();
+    float g_coef();
     friend ostream& operator<<(ostream&,Monom&);
     friend istream& operator>>(istream&,Monom&);
 

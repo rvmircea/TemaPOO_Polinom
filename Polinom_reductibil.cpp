@@ -1,19 +1,18 @@
-#include "Polinom.h"
-#include "Monom.h"
+#include "Polinom_reductibil.h"
 
-Polinom::Polinom()
+Polinom_reductibil::Polinom_reductibil()
 {
     nr_monoame = 1;
     m=new Monom;
 }
 
-Polinom::Polinom(const Polinom& p)
+/*Polinom_reductibil::Polinom_reductibil(const Polinom_reductibil& p)
 {
     nr_monoame=p.nr_monoame;
     m=p.m;
 }
-
-Polinom::Polinom(int nr,Monom* mn)
+*/
+Polinom_reductibil::Polinom_reductibil(int nr,Monom* mn)
 {
     nr_monoame = nr;
 
@@ -27,7 +26,7 @@ Polinom::Polinom(int nr,Monom* mn)
 
 }
 
-/*ostream& operator<<(ostream& out,Polinom p)
+/*ostream& operator<<(ostream& out,Polinom_reductibil p)
 {
 
    out<<p.m;
@@ -36,7 +35,7 @@ Polinom::Polinom(int nr,Monom* mn)
 }
 */
 
-void Polinom::afis()
+void Polinom_reductibil::afis()
 {
      cout<<nr_monoame<<endl;
     for(int i=0;i<nr_monoame;i++)
@@ -47,7 +46,14 @@ void Polinom::afis()
 
 
 }
-Polinom::~Polinom()
+Polinom_reductibil::~Polinom_reductibil()
 {
     delete m;
 }
+
+void Polinom_reductibil::criteriu()
+{
+
+}
+
+

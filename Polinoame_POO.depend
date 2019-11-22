@@ -1,23 +1,30 @@
 # depslib dependency file v1.0
-1574445875 source:e:\codeblocks\proiecte\polinoame_poo\main.cpp
+1574455825 source:e:\codeblocks\proiecte\polinoame_poo\main.cpp
 	<iostream>
 	"Monom.h"
 	"Polinom.h"
+	"Polinom_reductibil.h"
 
-1574444658 e:\codeblocks\proiecte\polinoame_poo\monom.h
+1574454797 e:\codeblocks\proiecte\polinoame_poo\monom.h
 	<iostream>
 
-1574444731 source:e:\codeblocks\proiecte\polinoame_poo\monom.cpp
+1574454797 source:e:\codeblocks\proiecte\polinoame_poo\monom.cpp
 	"Monom.h"
 
-1574445570 source:e:\codeblocks\proiecte\polinoame_poo\polinom.cpp
+1574455646 source:e:\codeblocks\proiecte\polinoame_poo\polinom.cpp
 	"Polinom.h"
 	"Monom.h"
 
-1574448995 e:\codeblocks\proiecte\polinoame_poo\polinom.h
+1574455731 e:\codeblocks\proiecte\polinoame_poo\polinom.h
 	<iostream>
 	"Monom.h"
 
-1574447264 source:e:\codeblocks\proiecte\polinoame_poo\polinom_ireductibil.cpp
+1574454469 source:e:\codeblocks\proiecte\polinoame_poo\polinom_ireductibil.cpp
+	"Polinom.h"
+
+1574456582 source:e:\codeblocks\proiecte\polinoame_poo\polinom_reductibil.cpp
+	"Polinom_reductibil.h"
+
+1574456582 e:\codeblocks\proiecte\polinoame_poo\polinom_reductibil.h
 	"Polinom.h"
 

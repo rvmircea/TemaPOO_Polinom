@@ -54,7 +54,12 @@ void Monom::operator=(const Monom &m)
     coef=m.coef;
 }
 
-void Monom::afis()
+int Monom::g_grad()
 {
-    cout<<coef<<"*X^"<<grad<<" ";
+    return grad;
+}
+
+float Monom::g_coef()
+{
+    return coef;
 }

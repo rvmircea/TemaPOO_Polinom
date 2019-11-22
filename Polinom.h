@@ -8,14 +8,15 @@ using namespace std;
 class Polinom{
 protected:
     int nr_monoame;
-    Monom *m;
+    Monom* m;
 public:
     Polinom();
     Polinom(int,Monom*);
     Polinom(const Polinom&);
     ~Polinom();
 
-    virtual void verificare_criteriu() =0;
+    void afis();
+    virtual void criteriu() =0;
 };
 
 #endif // POLINOM_H
