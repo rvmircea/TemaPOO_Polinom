@@ -39,7 +39,11 @@ Polinom_ireductibil::~Polinom_ireductibil()
 
 int Polinom_ireductibil::Verificare_criteriu()
 {
-
+        if(criteriu())
+            cout<<"DA";
+        else
+            cout<<"NU";
+    return 0;
 }
 
 

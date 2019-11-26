@@ -136,12 +136,6 @@ int Polinom::criteriu()
             return 0;
         }
     }
-
-    /*  for(int i=0; i<nr_monoame; i++)
-      {
-          int(m[i].g_coef());
-      }
-    */
     vector<int> prime;
     prime.push_back(2);
 
@@ -185,9 +179,7 @@ int Polinom::criteriu()
                         temp  = 1;
                     }
                 }
-
             }
-
 
         }
     }
@@ -195,10 +187,13 @@ int Polinom::criteriu()
     if(temp == 1)
     {
         cout<<"Polinomul este ireductibil!" ;
+          return 1;
     }
     else
-        cout<<"Polinomul este reductibil";
-
+        {
+            cout<<"Polinomul este reductibil";
+            return 0;
+        }
 
     /* if(ok == 1)
          cout<<"Exista numere prime "<<endl;
@@ -208,7 +203,7 @@ int Polinom::criteriu()
                  return 0;
          }
     */
-    return 1;
+
 }
 
 

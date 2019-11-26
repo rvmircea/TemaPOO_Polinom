@@ -14,11 +14,9 @@ public:
     Polinom(int,Monom*);
     Polinom(const Polinom&);
     ~Polinom();
-
-
-    int get_max(Monom* );
-    virtual void afis();
-    int criteriu();
+    int get_max(Monom*);
+    virtual void afis()=0;
+   int criteriu();
 
 };
 

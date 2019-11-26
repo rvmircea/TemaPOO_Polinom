@@ -28,13 +28,14 @@ Polinom_reductibil::Polinom_reductibil(int nr,Monom* mn)
 
 void Polinom_reductibil::afis()
 {
-     cout<<nr_monoame<<endl;
+     cout<<"Sunt reductibil !";
+     /*cout<<nr_monoame<<endl;
     for(int i=0;i<nr_monoame;i++)
     {
         cout<<m[i].g_coef()<<"*X^"<<m[i].g_grad()<<endl;
     }
 
-
+*/
 
 }
 Polinom_reductibil::~Polinom_reductibil()
@@ -44,7 +45,11 @@ Polinom_reductibil::~Polinom_reductibil()
 
 int Polinom_reductibil::Verificare_criteriu()
 {
-
+     if(criteriu())
+            cout<<"Nu";
+        else
+            cout<<"DA";
+    return 0;
 }
 
 

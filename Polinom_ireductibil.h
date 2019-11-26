@@ -14,8 +14,8 @@ public:
     Polinom_ireductibil(int,Monom*);
     Polinom_ireductibil(const Polinom_ireductibil&);
     ~Polinom_ireductibil();
-     void afis();
-     int Verificare_criteriu();
+    void afis();
+    int Verificare_criteriu();
 
 };
 
