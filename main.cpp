@@ -26,8 +26,6 @@ int main()
     //Polinom *poli(nr_m,m);
 
     Polinom_reductibil p(nr_m,m);
-
-
     p.criteriu();
    // p.afis();
     return 0;

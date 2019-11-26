@@ -16,11 +16,9 @@ public:
     ~Monom();
 
     //virtual void afisare() = 0;
-    void operator =(const Monom&);
-
-
     int g_grad();
     float g_coef();
+    void operator =(const Monom&);
     friend ostream& operator<<(ostream&,Monom&);
     friend istream& operator>>(istream&,Monom&);
 

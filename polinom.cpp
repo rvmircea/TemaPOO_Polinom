@@ -26,8 +26,6 @@ Polinom::Polinom(int nr,Monom* mn)
         cout<<m[i];
         cout<<endl;
     }
-
-
 }
 
 void Polinom::afis()
@@ -55,17 +53,17 @@ int cmmdc(Monom *m,int nr)
         return 0;
     }
 
-    for(int i=0;i<nr-1;i++)
+    for(int i=0; i<nr-1; i++)
     {
 
         int aux = abs(m[i].g_coef());
-       int  auy = abs(m[i+1].g_coef());
+        int  auy = abs(m[i+1].g_coef());
         while(aux != auy)
         {
-          if(aux > auy)
-            aux = aux - auy;
-          if(auy > aux)
-            auy= auy- aux;
+            if(aux > auy)
+                aux = aux - auy;
+            if(auy > aux)
+                auy= auy- aux;
         }
         if(aux == 1)
         {
@@ -102,9 +100,9 @@ int cmmdc(Monom *m,int nr)
 */
 int Polinom::get_max(Monom *m)
 {
-   int mxm = m[0].g_coef();
+    int mxm = m[0].g_coef();
 
-    for(int i=1;i<nr_monoame;i++)
+    for(int i=1; i<nr_monoame; i++)
     {
         if(m[i].g_coef() > mxm)
             mxm = m[i].g_coef();
@@ -117,8 +115,11 @@ int Polinom::criteriu()
     int temp = 0;
     int mxm = get_max(m);
 
-
-
+    if(nr_monoame == 1)
+    {
+        cout<<"Polinom ireductibil";
+        return 0;
+    }
 
     for(int i=0; i<nr_monoame; i++)
     {
@@ -136,18 +137,18 @@ int Polinom::criteriu()
         }
     }
 
-  /*  for(int i=0; i<nr_monoame; i++)
-    {
-        int(m[i].g_coef());
-    }
-*/
+    /*  for(int i=0; i<nr_monoame; i++)
+      {
+          int(m[i].g_coef());
+      }
+    */
     vector<int> prime;
     prime.push_back(2);
 
     for(int i=3; i < mxm; i++)
     {
         bool ok=true;
-        for(int j=0;j<prime.size() && prime[j]*prime[j] <= i;j++)
+        for(int j=0; j<prime.size() && prime[j]*prime[j] <= i; j++)
         {
             if(i % prime[j] == 0)
             {
@@ -164,39 +165,49 @@ int Polinom::criteriu()
 
     vector<int>::iterator i = prime.begin();
 
-    for(i = prime.begin();i != prime.end();i++)
+    for(i = prime.begin(); i != prime.end(); i++)
     {
-        for(int j =0;j<nr_monoame-1;j++)
+        for(int j =0; j<nr_monoame; j++)
         {
-            if( int(m[j].g_coef()) % *i == 0 && int(m[nr_monoame].g_coef()) % *i != 0 && int(m[0].g_coef()) % ((*i) *(*i)) != 0)
+            //cout<<endl<<m[j].g_coef()<<" "<<*i<<endl;
+            if( (int(m[j].g_coef()) % (*i)) == 0  )
+            {
+                //cout<<"Aici 1 ";
+                //cout<<"Mxm: "<<m[0].g_coef()<<" "<<*i<<endl;
+                if(int(m[0].g_coef()) % (*i) != 0 )
                 {
-                   temp = 1;
+
+                   // cout<<"Aici 2 ";
+                   // cout<<"Coeficientul cel mai mic: "<<int(m[nr_monoame - 1].g_coef())<<" i patrat: "<<(*i)  *  (*i)<<endl;
+                    if( (int(m[nr_monoame - 1].g_coef()) % ((*i) *(*i))) != 0)
+                    {
+                        //cout<<"Aici 3 ";
+                        temp  = 1;
+                    }
                 }
+
+            }
+
+
         }
     }
 
-
-
     if(temp == 1)
     {
-         cout<<"Polinomul este ireductibil!" ;
+        cout<<"Polinomul este ireductibil!" ;
     }
     else
         cout<<"Polinomul este reductibil";
 
 
-   /* if(ok == 1)
-        cout<<"Exista numere prime "<<endl;
-     if( cmmdc(m,nr_monoame) == 0)
-        {
-            cout<<"Criteriul nu poate fi aplicat ";
-                return 0;
-        }
-*/
-
-
-
-
+    /* if(ok == 1)
+         cout<<"Exista numere prime "<<endl;
+      if( cmmdc(m,nr_monoame) == 0)
+         {
+             cout<<"Criteriul nu poate fi aplicat ";
+                 return 0;
+         }
+    */
     return 1;
 }
 
