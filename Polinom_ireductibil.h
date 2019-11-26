@@ -8,12 +8,14 @@ using namespace std;
 class Polinom_ireductibil:public Polinom
 {
 public:
-    void criteriu();
+
+
     Polinom_ireductibil();
     Polinom_ireductibil(int,Monom*);
-    Polinom_ireductibil(const Polinom&);
+    Polinom_ireductibil(const Polinom_ireductibil&);
     ~Polinom_ireductibil();
      void afis();
+     int Verificare_criteriu();
 
 };
 

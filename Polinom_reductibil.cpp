@@ -6,12 +6,12 @@ Polinom_reductibil::Polinom_reductibil()
     m=new Monom;
 }
 
-/*Polinom_reductibil::Polinom_reductibil(const Polinom_reductibil& p)
+Polinom_reductibil::Polinom_reductibil(const Polinom_reductibil& p)
 {
     nr_monoame=p.nr_monoame;
     m=p.m;
 }
-*/
+
 Polinom_reductibil::Polinom_reductibil(int nr,Monom* mn)
 {
     nr_monoame = nr;
@@ -25,15 +25,6 @@ Polinom_reductibil::Polinom_reductibil(int nr,Monom* mn)
 
 
 }
-
-/*ostream& operator<<(ostream& out,Polinom_reductibil p)
-{
-
-   out<<p.m;
-
-    return out;
-}
-*/
 
 void Polinom_reductibil::afis()
 {
@@ -51,7 +42,7 @@ Polinom_reductibil::~Polinom_reductibil()
     delete m;
 }
 
-void Polinom_reductibil::criteriu()
+int Polinom_reductibil::Verificare_criteriu()
 {
 
 }

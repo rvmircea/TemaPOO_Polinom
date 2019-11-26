@@ -15,8 +15,11 @@ public:
     Polinom(const Polinom&);
     ~Polinom();
 
-    void afis();
-    virtual void criteriu() =0;
+
+    int get_max(Monom* );
+    virtual void afis();
+    int criteriu();
+
 };
 
 #endif // POLINOM_H

@@ -11,13 +11,10 @@ Monom* Citire(int nr_monoame)
 
     for(int i=0;i<nr_monoame; i++)
     {
-
         cin>>m[i];
-
     }
     return m;
 }
-
 
 int main()
 {
@@ -26,8 +23,12 @@ int main()
     cin>>nr_m;
     Monom *m;
     m=Citire(nr_m);
+    //Polinom *poli(nr_m,m);
+
     Polinom_reductibil p(nr_m,m);
 
-    p.afis();
+
+    p.criteriu();
+   // p.afis();
     return 0;
 }

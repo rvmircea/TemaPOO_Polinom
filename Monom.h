@@ -18,6 +18,7 @@ public:
     //virtual void afisare() = 0;
     void operator =(const Monom&);
 
+
     int g_grad();
     float g_coef();
     friend ostream& operator<<(ostream&,Monom&);

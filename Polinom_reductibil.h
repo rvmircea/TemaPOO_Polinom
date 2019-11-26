@@ -8,13 +8,13 @@ using namespace std;
 class Polinom_reductibil:public Polinom
 {
 public:
-    void criteriu();
+
     Polinom_reductibil();
     Polinom_reductibil(int,Monom*);
-    Polinom_reductibil(const Polinom&);
+    Polinom_reductibil(const Polinom_reductibil&);
     ~Polinom_reductibil();
      void afis();
-
+    int Verificare_criteriu();
 };
 
 #endif // POLINOMIREDUCTIBIL_H

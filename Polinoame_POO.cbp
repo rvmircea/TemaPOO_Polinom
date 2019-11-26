@@ -35,6 +35,10 @@
 		<Unit filename="Monom.cpp" />
 		<Unit filename="Monom.h" />
 		<Unit filename="Polinom.h" />
+		<Unit filename="Polinom_ireductibil.cpp" />
+		<Unit filename="Polinom_ireductibil.h" />
+		<Unit filename="Polinom_reductibil.cpp" />
+		<Unit filename="Polinom_reductibil.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="polinom.cpp" />
 		<Extensions>
