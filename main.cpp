@@ -38,7 +38,7 @@ int main()
    Polinom *p;
    Polinom_ireductibil pi(nr_m,m);
    Polinom_reductibil pr(nr_m,m);
-   p = &pr;
+   p = &pi;
   //result =  p->Verificare_criteriu();
   /*
   if(result == 1)
@@ -48,7 +48,7 @@ int main()
         else
             cout<<"Criteriul nu poate fi aplicat";
 */
-
+    p->Verificare_criteriu();
    p->Tip_clasa();
     return 0;
 }

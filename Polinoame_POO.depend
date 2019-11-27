@@ -12,7 +12,7 @@
 1574878833 source:e:\codeblocks\proiecte\polinoame_poo\monom.cpp
 	"Monom.h"
 
-1574873647 source:e:\codeblocks\proiecte\polinoame_poo\polinom.cpp
+1574882848 source:e:\codeblocks\proiecte\polinoame_poo\polinom.cpp
 	"Polinom.h"
 	"Monom.h"
 	<stdlib.h>
@@ -22,11 +22,13 @@
 	<iostream>
 	"Monom.h"
 
-1574873647 source:e:\codeblocks\proiecte\polinoame_poo\polinom_ireductibil.cpp
+1574882848 source:e:\codeblocks\proiecte\polinoame_poo\polinom_ireductibil.cpp
 	"Polinom_ireductibil.h"
+	<vector>
 
-1574873647 source:e:\codeblocks\proiecte\polinoame_poo\polinom_reductibil.cpp
+1574883068 source:e:\codeblocks\proiecte\polinoame_poo\polinom_reductibil.cpp
 	"Polinom_reductibil.h"
+	<vector>
 
 1574877808 e:\codeblocks\proiecte\polinoame_poo\polinom_reductibil.h
 	"Polinom.h"

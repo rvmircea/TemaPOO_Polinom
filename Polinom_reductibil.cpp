@@ -13,7 +13,7 @@ void Polinom_reductibil::afis()
 {
 
     cout<<endl;
-    cout<<m[0].g_coef()<<"*X^"<<m[0].g_grad();
+    cout<<m[0];
 
     for(int i=1; i<nr_monoame; i++)
     {

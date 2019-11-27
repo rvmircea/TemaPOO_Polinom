@@ -113,6 +113,7 @@ int Polinom_ireductibil::Verificare_criteriu()
     }
 
 }
+
 //Functie virtuala ce afiseaza tipul clasei in care este apelata
 void Polinom_ireductibil::Tip_clasa()
 {
