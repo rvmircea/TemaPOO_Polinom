@@ -17,6 +17,10 @@ public:
     int get_max(Monom*);
     virtual void afis()=0;
    int criteriu();
+   virtual void Verificare_criteriu()=0;
+  // int Horner(Monom*)
+
+
 
 };
 

@@ -6,13 +6,13 @@ Polinom_ireductibil::Polinom_ireductibil()
     m=new Monom;
 }
 
-Polinom_ireductibil::Polinom_ireductibil(const Polinom_ireductibil& p)
+/*Polinom_ireductibil::Polinom_ireductibil(const Polinom_ireductibil& p)
 {
     nr_monoame=p.nr_monoame;
     m=p.m;
 }
-
-Polinom_ireductibil::Polinom_ireductibil(int nr,Monom* mn)
+*/
+/*Polinom_ireductibil::Polinom_ireductibil(int nr,Monom* mn)
 {
     nr_monoame = nr;
 
@@ -23,27 +23,34 @@ Polinom_ireductibil::Polinom_ireductibil(int nr,Monom* mn)
         cout<<endl;
     }
 }
-
+*/
 void Polinom_ireductibil::afis()
 {
-        cout<<nr_monoame<<endl;
-        for(int i=0;i<nr_monoame;i++)
-        {
-            cout<<m[i].g_coef()<<"*X^"<<m[i].g_grad()<<endl;
-        }
+    cout<<endl;
+    cout<<m[0].g_coef()<<"*X^"<<m[0].g_grad();
+
+    for(int i=1; i<nr_monoame; i++)
+    {
+        if(m[i].g_coef() < 0)
+            cout<<" - "<<m[i].g_coef()<<"*X^"<<m[i].g_grad();
+        else
+            cout<<" + "<<m[i].g_coef()<<"*X^"<<m[i].g_grad();
+    }
+    cout<<endl;
 }
 Polinom_ireductibil::~Polinom_ireductibil()
 {
     delete m;
 }
 
-int Polinom_ireductibil::Verificare_criteriu()
+void  Polinom_ireductibil::Verificare_criteriu()
 {
-        if(criteriu())
-            cout<<"DA";
+    int result = criteriu();
+        if(result == 1)
+            cout<<endl<<"\nPolinom ireductibil";
+        else if(result == 0)
+            cout<<endl<<"\nPolinom reductibil";
         else
-            cout<<"NU";
-    return 0;
+            cout<<"Criteriul nu poate fi aplicat";
+
 }
-
-

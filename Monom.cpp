@@ -32,7 +32,7 @@ ostream& operator<<(ostream& out,Monom& m)
 
 istream& operator>>(istream&in, Monom& m)
 {
-    cout<<"Cititi monomul: \n";
+    cout<<"\nCititi monomul: \n";
     cout<<"Coeficientul = ";
     cin>>m.coef;
     cout<<"Gradul = ";

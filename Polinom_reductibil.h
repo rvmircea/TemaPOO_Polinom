@@ -10,11 +10,18 @@ class Polinom_reductibil:public Polinom
 public:
 
     Polinom_reductibil();
-    Polinom_reductibil(int,Monom*);
+
+    /*Polinom_reductibil(int,Monom*);
     Polinom_reductibil(const Polinom_reductibil&);
-    ~Polinom_reductibil();
+    */
+    //apel explicit constructor parametrizat din baza Polinom
+    Polinom_reductibil(int nr, Monom* mono):Polinom(nr,mono){nr_monoame=nr,m=mono;}
+    //apel explicit constructor copiere din baza Polinom
+    Polinom_reductibil(const Polinom_reductibil& p):Polinom(p){nr_monoame=p.nr_monoame;m=p.m;}
+     ~Polinom_reductibil();
+
      void afis();
-    int Verificare_criteriu();
+    void Verificare_criteriu();
 };
 
 #endif // POLINOMIREDUCTIBIL_H
