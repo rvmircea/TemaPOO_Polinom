@@ -27,7 +27,7 @@ void Polinom_reductibil::afis()
 }
 
 
-//Functia care verifica Criteriul lui Eisenstein - Proprietatea unui polinom de a putea fi scris ca produs de 2 polinoame neconstante - Ireductibilitate peste Z
+//Functia care verifica Criteriul lui Eisenstein - Proprietatea unui polinom de a putea fi scris ca produs de 2 polinoame neconstante
 int Polinom_reductibil::Verificare_criteriu()
 {
     int temp = 0;
@@ -54,7 +54,7 @@ int Polinom_reductibil::Verificare_criteriu()
             return 0;
         }
     }
-
+//Coeficientii trebuie sa fie coprimi
     if(coprime(m,nr_monoame) != 1)
     {
         cout<<"Nu sunt prime intre ele, nu se poate aplica criteriul in continuare\n\n";
@@ -68,6 +68,7 @@ int Polinom_reductibil::Verificare_criteriu()
         return 1;
     }
 
+    //Vector ce contine toate numerele prime mai mici decat cel mai mare coeficient din polinom
     vector<int> prime;
     prime.push_back(2);
 
@@ -88,6 +89,7 @@ int Polinom_reductibil::Verificare_criteriu()
         }
     }
 
+//Verificare criteriu Eisenstein - Daca exista un numar prim p a.i. p divide a_i pentru i din [0,n-1], p nu divide a_n si p*p nu divide a_0
     vector<int>::iterator i = prime.begin();
 
     for(i = prime.begin(); i != prime.end(); i++)
@@ -114,7 +116,7 @@ int Polinom_reductibil::Verificare_criteriu()
     }
 
 }
-
+//Functie virtuala ce afiseaza tipul clasei in care este apelata
 void Polinom_reductibil::Tip_clasa()
 {
     cout<<"\nClasa polinom reductibil\n";

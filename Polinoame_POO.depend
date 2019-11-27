@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1574874645 source:e:\codeblocks\proiecte\polinoame_poo\main.cpp
+1574878833 source:e:\codeblocks\proiecte\polinoame_poo\main.cpp
 	<iostream>
 	"Monom.h"
 	"Polinom.h"
@@ -9,7 +9,7 @@
 1574873647 e:\codeblocks\proiecte\polinoame_poo\monom.h
 	<iostream>
 
-1574873647 source:e:\codeblocks\proiecte\polinoame_poo\monom.cpp
+1574878833 source:e:\codeblocks\proiecte\polinoame_poo\monom.cpp
 	"Monom.h"
 
 1574873647 source:e:\codeblocks\proiecte\polinoame_poo\polinom.cpp

@@ -49,7 +49,7 @@ void Polinom::afis()
 }
 
 
-
+//Functia verifica daca coeficientii polinomului sunt corpimi
 int Polinom::coprime(Monom *m,int nr)
 {
     int temp;
@@ -87,7 +87,7 @@ int Polinom::coprime(Monom *m,int nr)
 
     return 0;
 }
-//Functia returneaza coeficientul cu valoarea cea mai mare
+//Functia returneaza coeficientul cu valoarea cea mai mare din polinom
 int Polinom::get_max(Monom *m)
 {
     int mxm = m[0].g_coef();
