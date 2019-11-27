@@ -2,7 +2,7 @@
 #define POLINOMREDUCTIBIL_H
 
 #include "Polinom.h"
-#include <vector>
+
 using namespace std;
 
 class Polinom_reductibil:public Polinom

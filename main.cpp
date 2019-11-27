@@ -38,7 +38,7 @@ int main()
    Polinom_ireductibil pi(nr_m,m);
    Polinom_reductibil pr(nr_m,m);
    p = &pr;
-  result =  p->Verificare_criteriu();
+  //result =  p->Verificare_criteriu();
   /*
   if(result == 1)
             cout<<endl<<"\nPolinom ireductibil";

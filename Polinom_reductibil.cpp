@@ -1,4 +1,5 @@
 #include "Polinom_reductibil.h"
+#include <vector>
 
 Polinom_reductibil::Polinom_reductibil()
 {

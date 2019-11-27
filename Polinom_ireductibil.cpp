@@ -1,4 +1,6 @@
 #include "Polinom_ireductibil.h"
+#include <vector>
+
 
 Polinom_ireductibil::Polinom_ireductibil()
 {
