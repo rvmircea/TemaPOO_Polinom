@@ -1,7 +1,7 @@
 #ifndef MONOM_H
 #define MONOM_H
-#include <iostream>
 
+#include <iostream>
 
 using namespace std;
 
@@ -15,17 +15,11 @@ public:
     Monom(const Monom&);
     ~Monom();
 
-    //virtual void afisare() = 0;
     int g_grad();
     float g_coef();
     void operator =(const Monom&);
     friend ostream& operator<<(ostream&,Monom&);
     friend istream& operator>>(istream&,Monom&);
-
 };
 
-
-
 #endif // MONOM_H
-
-

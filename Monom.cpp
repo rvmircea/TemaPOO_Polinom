@@ -9,7 +9,6 @@ Monom::Monom(const Monom &x)
 {
 grad = x.grad;
 coef = x.coef;
-cout<<"\nCopiere a fost facuta cu succes! ";
 }
 
 
@@ -40,13 +39,6 @@ istream& operator>>(istream&in, Monom& m)
 
     return in;
 }
-
-/*
-void Monom::afisare()
- {
-     cout<<"Monom";
- }
-*/
 
 void Monom::operator=(const Monom &m)
 {

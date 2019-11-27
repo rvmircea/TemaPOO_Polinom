@@ -7,10 +7,12 @@ using namespace std;
 
 Monom* Citire(int nr_monoame)
 {
+
     Monom *m;
     m = new Monom[nr_monoame];
 
-    cin>>m[0];
+             cin>>m[0];
+
     for(int i=1;i<nr_monoame; i++)
     {
         cin>>m[i];
@@ -24,24 +26,28 @@ Monom* Citire(int nr_monoame)
 }
 
 int main()
-{
+    {
+    int result;
     int nr_m;
     cout<<"Cititi nr monoame: ";
     cin>>nr_m;
     Monom *m;
     m=Citire(nr_m);
-    //Polinom *poli(nr_m,m);
 
-    //Polinom_reductibil p(nr_m,m);
-    //p.criteriu();
-   // p.Verificare_criteriu();
-
-   // p.afis();
    Polinom *p;
    Polinom_ireductibil pi(nr_m,m);
    Polinom_reductibil pr(nr_m,m);
    p = &pr;
-   p->Verificare_criteriu();
-   p->afis();
+  result =  p->Verificare_criteriu();
+  /*
+  if(result == 1)
+            cout<<endl<<"\nPolinom ireductibil";
+        else if(result == 0)
+            cout<<endl<<"\nPolinom reductibil";
+        else
+            cout<<"Criteriul nu poate fi aplicat";
+*/
+
+   p->Tip_clasa();
     return 0;
 }
