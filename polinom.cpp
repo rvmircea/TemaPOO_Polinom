@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <vector>
 
+
+//constructori
 Polinom::Polinom()
 {
     nr_monoame = 1;
@@ -23,7 +25,13 @@ Polinom::Polinom(int nr,Monom* mn)
     m = new Monom;
     *m = *(mn);
 }
+//destructor
+Polinom::~Polinom()
+{
+    delete m;
+}
 
+//metode
 void Polinom::afis()
 {
     cout<<nr_monoame<<endl;
@@ -40,10 +48,7 @@ void Polinom::afis()
 
 }
 
-Polinom::~Polinom()
-{
-    delete m;
-}
+
 
 int Polinom::coprime(Monom *m,int nr)
 {
@@ -82,7 +87,7 @@ int Polinom::coprime(Monom *m,int nr)
 
     return 0;
 }
-
+//Functia returneaza coeficientul cu valoarea cea mai mare
 int Polinom::get_max(Monom *m)
 {
     int mxm = m[0].g_coef();

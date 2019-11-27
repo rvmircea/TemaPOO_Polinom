@@ -1,13 +1,13 @@
 #include "Polinom_ireductibil.h"
 #include <vector>
 
-
+//constructor
 Polinom_ireductibil::Polinom_ireductibil()
 {
     nr_monoame = 1;
     m=new Monom;
 }
-
+//metode
 void Polinom_ireductibil::afis()
 {
     cout<<endl;
@@ -22,12 +22,8 @@ void Polinom_ireductibil::afis()
     }
     cout<<endl;
 }
-Polinom_ireductibil::~Polinom_ireductibil()
-{
-    delete m;
-}
-
-int  Polinom_ireductibil::Verificare_criteriu()
+//Functia care verifica Criteriul lui Eisenstein - Proprietatea unui polinom de a putea fi scris ca produs de 2 polinoame neconstante - Ireductibilitate peste Z
+int Polinom_ireductibil::Verificare_criteriu()
 {
     int temp = 0;
     int mxm = get_max(m);
@@ -117,4 +113,10 @@ int  Polinom_ireductibil::Verificare_criteriu()
 void Polinom_ireductibil::Tip_clasa()
 {
     cout<<"\nClasa Polinom Ireductibil\n";
+}
+
+//destructor
+Polinom_ireductibil::~Polinom_ireductibil()
+{
+    delete m;
 }

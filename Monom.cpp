@@ -1,5 +1,6 @@
 #include "Monom.h"
 
+//Constructori
 Monom::Monom()
 {
     grad=coef=0;
@@ -17,11 +18,12 @@ Monom::Monom(int gr,float cf)
     grad=gr;
     coef=cf;
 }
-
+//destructor
 Monom::~Monom()
 {
 }
 
+//supraincarcarea operatorilor <<, >>,  =
 ostream& operator<<(ostream& out,Monom& m)
 {
     out<<m.coef<<"*X^"<<m.grad<<" ";
@@ -46,6 +48,7 @@ void Monom::operator=(const Monom &m)
     coef=m.coef;
 }
 
+//Get-ere
 int Monom::g_grad()
 {
     return grad;

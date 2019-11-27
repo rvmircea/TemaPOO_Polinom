@@ -5,6 +5,7 @@
 #include "Polinom_ireductibil.h"
 using namespace std;
 
+//Functie de citire monoame
 Monom* Citire(int nr_monoame)
 {
 
